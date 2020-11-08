@@ -48,7 +48,6 @@ public class CustomerController {
         customer.setEmailId(customerDetails.getEmailId());
         customer.setLastName(customerDetails.getLastName());
         customer.setFirstName(customerDetails.getFirstName());
-        customer.setUpdatedAt(new Date());
         final Customer updatedCustomer = customerRepository.save(customer);
         return ResponseEntity.ok(updatedCustomer);
     }

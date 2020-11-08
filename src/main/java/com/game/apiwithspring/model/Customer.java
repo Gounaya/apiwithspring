@@ -25,10 +25,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String emailId;
-    private Date createdAt;
-    private String createdBy;
-    private Date updatedAt;
-    private String updatedby;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -63,39 +60,5 @@ public class Customer {
         this.emailId = emailId;
     }
 
-    @Column(name = "created_at", nullable = false)
-    @CreatedDate
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 
-    @Column(name = "created_by", nullable = false)
-    @CreatedBy
-    public String getCreatedBy() {
-        return createdBy;
-    }
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    @Column(name = "updated_at", nullable = false)
-    @LastModifiedDate
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    @Column(name = "updated_by", nullable = false)
-    @LastModifiedBy
-    public String getUpdatedby() {
-        return updatedby;
-    }
-    public void setUpdatedby(String updatedby) {
-        this.updatedby = updatedby;
-    }
 }
